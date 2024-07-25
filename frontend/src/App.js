@@ -1,14 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-import AppBar  from "./components/AppBar"
+import AppBar from "./components/AppBar"
 import Home from "./screens/Home"
+import { Provider } from "react-redux"
 
 function App() {
   return (
-    <div className="App">
-      <AppBar></AppBar>
-      <Home></Home>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <AppBar></AppBar>
+        <Home></Home>
+      </div>
+    </Provider>
   );
 }
 
